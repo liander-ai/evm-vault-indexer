@@ -1,0 +1,30 @@
+{
+  "name": "evm-vault-indexer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Indexes StakingVault on-chain events into PostgreSQL and serves them over a Fastify GraphQL API",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "index": "tsx src/indexer/run.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fastify": "^5.1.0",
+    "graphql": "^16.9.0",
+    "mercurius": "^16.0.1",
+    "pg": "^8.13.1",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "pg-mem": "^3.0.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
